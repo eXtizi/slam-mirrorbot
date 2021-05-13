@@ -157,13 +157,15 @@ class MirrorListener(listeners.MirrorListeners):
             if INDEX_URL is not None:
                 url_path = requests.utils.quote(f'{download_dict[self.uid].name()}')
                 share_url = f'{INDEX_URL}/{url_path}'
+                vshare_url = f'{INDEX_URL}/{url_path}?a=view'
                 if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                     share_url += '/'
                 if SHORTENER is not None and SHORTENER_API is not None:
                     siurl = requests.get('https://{}/api?api={}&url={}&format=text'.format(SHORTENER, SHORTENER_API, share_url)).text
-                    buttons.buildbutton("⚡Index Link⚡ ⫷[ʘϾḂ]⫸", siurl)
+                    buttons.buildbutton("⚡Index Download Link⚡ ⫷[ʘϾḂ]⫸", siurl)
                 else:
-                    buttons.buildbutton("⚡Index Link⚡ ⫷[ʘϾḂ]⫸", share_url)
+                    buttons.buildbutton("⚡Index Download Link⚡ ⫷[ʘϾḂ]⫸", share_url)
+                    buttons.buildbutton("⚡Index Download Link⚡ ⫷[ʘϾḂ]⫸", vshare_url)
             if BUTTON_THREE_NAME is not None and BUTTON_THREE_URL is not None:
                 buttons.buildbutton(f"{BUTTON_THREE_NAME}", f"{BUTTON_THREE_URL}")
             if BUTTON_FOUR_NAME is not None and BUTTON_FOUR_URL is not None:
