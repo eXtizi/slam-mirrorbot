@@ -13,7 +13,7 @@ def cloneNode(update,context):
     if update.message.from_user.username:
         uname = f"@{update.message.from_user.username}"
     else:
-        uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
+        uname = f'\n\n Credit Goes TO ⫷[ʘϾḂ]⫸'
     if uname is not None:
             cc = f'\n\n Credit Goes TO ⫷[ʘϾḂ]⫸'
     if len(args) > 1:
