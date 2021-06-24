@@ -23,5 +23,5 @@ class _BotCommands:
         self.DeleteCommand = 'del'
         self.UsageCommand = 'usage'
         self.RepoCommand = 'repo'
-
+        self.hoardCommand = 'hoard'
 BotCommands = _BotCommands()
