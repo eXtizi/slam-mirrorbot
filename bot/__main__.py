@@ -16,7 +16,7 @@ from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot.helper.telegram_helper.message_utils import *
 from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_time
 from .helper.telegram_helper.filters import CustomFilters
-from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, anime, stickers, search, delete, speedtest, usage
+from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, anime, stickers, search, delete, speedtest, usage,hoard
 
 now=datetime.now(pytz.timezone('Asia/Jakarta'))
 
@@ -132,14 +132,14 @@ def bot_help(update, context):
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
 
 /{BotCommands.RepoCommand}: Get the bot repo.
-
+/{BotCommands.hoardCommand}: Cat user bot wspam command.usefull for hoarding.
 /tshelp: Get help for torrent search module.
 
 /weebhelp: Get help for anime, manga and character module.
 
 /stickerhelp: Get help for stickers module.
 '''
-    sendMessage(help_string, context.bot, update)
+    sendMessage(help_string, context.bot, update) 
 
 
 def main():
